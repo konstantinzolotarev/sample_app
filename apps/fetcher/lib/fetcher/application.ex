@@ -10,7 +10,7 @@ defmodule Fetcher.Application do
 
     # List all child processes to be supervised
     children = [
-      worker(Fetcher.Data, []),
+      worker(Fetcher.Balance, []),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
