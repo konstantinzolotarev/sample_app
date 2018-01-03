@@ -103,7 +103,7 @@ defmodule Fetcher.Balance do
 
 
   defp make_http_request() do
-    case HTTPoison.get(url) do
+    case HTTPoison.get(@server) do
       {:ok, %HTTPoison.Response{status_code: 200, body: body}} ->
         balance = Poison.decode!(body, keys: :atoms)
         {:ok, balance}
